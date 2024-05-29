@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background-color: #242424;
+  background-color: #EDEDE9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,18 +12,193 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  gap: 15px;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .CV, .CV * {
+    visibility: visible;
+  }
+  .CV {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.buttons{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid black;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#ffffff;
+  background-color: #e0b797de;
+  text-align:center;
+  transition: all 0.2s;
+}
+.buttons:hover{
+  color:black;
+  background-color:rgb(228, 210, 171);
+}
+@media all and (max-width:30em){
+  .buttons{
+  display:block;
+  margin:0.4em auto;
+  }
+} 
+
+.inputForm{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 30px;
+  border-radius: 15px;
+  background-color: #D5BDAF;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  height: fit-content;
+}
+
 .inputCont{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
-  background-color: white;
+  background-color: #E3D5CA;
+  margin: 5px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 8px;
+
 }
 
-.educationInput{
-  display: flex;
+.educationEditSection{
+  background-color: #D6CCC2;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 8px;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: pink;
+  text-align: center;
 }
+
+.workEditSection{
+  background-color: #D6CCC2;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.addEducation{
+  padding-top: 20px;
+}
+.addWork{
+  padding-top: 20px;
+}
+
+.CV{
+  display: flex;
+  background-color: azure;
+  gap: 5px;
+  flex-direction: column;
+  padding-top: 0px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 210mm;
+  height: 297mm;
+
+
+}
+
+.fullName{
+  font-size: 2vw;
+  font-weight: 600; 
+  text-align: center;
+}
+
+.emailPhone{
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.education{
+  border-top: black;
+  border-top-style: solid;
+}
+
+.eductaionSection{
+  border-bottom: black;
+  border-bottom-style: double;
+}
+
+.nameAndDate{
+  display: flex;
+  justify-content: space-between;
+}
+
+.work{
+  border-top: black;
+  border-top-style: solid;
+  border-bottom: dotted;
+}
+
+.pdTitle{
+  align-self: center;
+}
+
+textarea{
+  width: 12.7vw;
+  height: 3vh
+}
+
+textarea:focus{
+  width: 20vw;
+  height: 20vh;
+}
+
+.inputCont button{
+  margin-top: 10px  ;
+  justify-self: center;
+  align-self: center;
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
